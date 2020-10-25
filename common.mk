@@ -189,9 +189,9 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.9 \
     vendor.display.config@1.9_vendor
 
-# Doze
+# DPM
 PRODUCT_PACKAGES += \
-    Doze
+    libshim_dpmframework
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -203,7 +203,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service \
-    OneplusPocketMode
+    fingerprintd
 
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
@@ -282,10 +282,6 @@ PRODUCT_PACKAGES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.oneplus_msm8998
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.oneplus_msm8998
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -439,9 +435,15 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
-# Touch
+# TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oneplus_msm8998
+    textclassifier.bundle1
+
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@1.0-service \
+    thermal.msm8998
 
 # Trust HAL
 PRODUCT_PACKAGES += \
