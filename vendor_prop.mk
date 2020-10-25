@@ -252,8 +252,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
-    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-    vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
+    rild.libpath=/vendor/lib64/libril-wrapper.so \
+    vendor.rild.libpath=/vendor/lib64/libril-wrapper.so \
     persist.rild.nitz_plmn="" \
     persist.rild.nitz_long_ons_0="" \
     persist.rild.nitz_long_ons_1="" \
