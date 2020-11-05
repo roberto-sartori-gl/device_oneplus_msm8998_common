@@ -262,3 +262,9 @@ on property:sys.boot_completed=1
 
 on property:sys.shutdown.requested=*
     write /sys/module/oneplus_fastchg/parameters/mcu_reset 1
+
+on property:sys.button_backlight.on=true
+    write /sys/class/leds/button-backlight/brightness 255
+
+on property:sys.button_backlight.on=false
+    write /sys/class/leds/button-backlight/brightness 0
