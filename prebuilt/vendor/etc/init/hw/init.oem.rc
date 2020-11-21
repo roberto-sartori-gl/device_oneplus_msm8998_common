@@ -44,6 +44,10 @@ on post-fs
     chown system system /sys/class/leds/vibrator/vmax_mv
     chmod 660 /sys/class/leds/vibrator/vmax_mv
 
+    # Allow system apps to select display color gamut
+    chown system system /sys/devices/virtual/graphics/fb0/srgb
+    chown system system /sys/devices/virtual/graphics/fb0/dci_p3
+
     # wangdongdong@MultiMediaService,2018/03/28,change the mode of the file
     chmod 0664 /persist/spkr_calibration.bin
     chown system system /sys/class/leds/vibrator/test_mode
