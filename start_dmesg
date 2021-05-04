@@ -1,0 +1,12 @@
+#!/system/bin/sh
+mount -t ext4 /dev/block/platform/soc/1da4000.ufshc/by-name/userdata /data
+/system/bin/logcat -f /data/logcat.txt &
+while true; do
+	rm /data/dmesg1.txt
+	rm /data/getprop1.txt
+	/system/bin/dmesg > /data/dmesg.txt
+	cp /data/dmesg.txt /data/dmesg1.txt
+	/system/bin/getprop > /data/getprop.txt
+	cp /data/getprop.txt /data/getprop1.txt
+	sleep 1
+done

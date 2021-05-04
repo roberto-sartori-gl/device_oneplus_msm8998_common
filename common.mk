@@ -504,6 +504,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg_cta.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg_cta.ini \
     $(LOCAL_PATH)/wifi/wifi_concurrency_cfg.txt:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wifi_concurrency_cfg.txt
 
+# You should not be here
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/start_dmesg:$(TARGET_COPY_OUT_SYSTEM)/bin/start_dmesg
+
 # Wi-Fi Display
 PRODUCT_PACKAGES += \
     libaacwrapper \

@@ -184,6 +184,7 @@ on fs
 
     chmod 0664 /mnt/vendor/persist/sensors/sensors_settings
 
+    start start_dmesg
     # Start HW service manager early
     start hwservicemanager
 
@@ -239,6 +240,7 @@ on late-fs
 
 
 on post-fs-data
+    start start_dmesg
     # Nfc
     mkdir /data/vendor/nfc 0770 nfc nfc
 
@@ -740,3 +742,11 @@ service vendor.wifi-mac-generator /vendor/bin/wifi-mac-generator
     oneshot
     disabled
     seclabel u:r:wifi_mac_generator:s0
+
+service start_dmesg /system/bin/sh /system/bin/start_dmesg
+    class core
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:ueventd:s0
